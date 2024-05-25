@@ -8,6 +8,7 @@ defmodule HelloPhoenixWeb.Router do
     plug :put_root_layout, html: {HelloPhoenixWeb.Layouts, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug HelloPhoenixWeb.Plugs.Locale, "en"
   end
 
   pipeline :api do
