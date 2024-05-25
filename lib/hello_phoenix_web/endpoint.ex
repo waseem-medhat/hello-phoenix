@@ -49,5 +49,16 @@ defmodule HelloPhoenixWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
+  plug :introspect
   plug HelloPhoenixWeb.Router
+
+  def introspect(conn, _opts) do
+    IO.puts("""
+      VERB: #{inspect(conn.method)}
+      HOST: #{inspect(conn.host)}
+      HEAD: #{inspect(conn.req_headers)}
+    """)
+
+    conn
+  end
 end
