@@ -1,5 +1,7 @@
 # HelloPhoenix
 
+This code is based on the official guides for Phoenix: <https://hexdocs.pm/phoenix/1.7.12/overview.html>
+
 To start your Phoenix server:
 
   * Run `mix setup` to install and setup dependencies
