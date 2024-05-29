@@ -8,6 +8,8 @@ defmodule HelloPhoenixWeb.PageController do
   end
 
   def redirect_test(conn, _params) do
-    render(conn, :home, layout: false)
+    conn
+    |> put_flash(:error, "Is it?")
+    |> render(:home, layout: false)
   end
 end
